@@ -134,7 +134,7 @@ a:focus {
 	position: fixed;
 	margin: 0 0 20px 0;
 	width: 100%;
-	background: #ffffff;
+	background: #dddddd;
 	transform: translate(0, 30%);
 	z-index: 1;
 }
@@ -175,6 +175,7 @@ nav {
 	display: inline-block;
 	float: right;
 	padding: 0 5px;
+	background: #ffffff;
 	border-top: 5px solid #dddddd;
 	border-bottom: 5px solid #dddddd;
 }
