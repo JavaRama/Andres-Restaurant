@@ -1,86 +1,450 @@
-<!doctype html>
-<html dir="LTR" lang="en-CA">
-	<head>	
-		<link rel="stylesheet" type="text/css" href="main.css">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Andres Restaurant</title>
-		<meta content="" name="description">
-		<meta content="restaurant, fine dining, pizza" name="keywords">
-	    <!--[if lt IE 9]>
-	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	    <![endif]-->
-	</head>
-	<body>
-		<header id="header" title="Main Header">
-			<h1 class="outline">Andre's Restaurant</h1>
-			<div class="header-container clearfix">
-				<figure id="logo"><a href="index.html"><img src="images/logo.png" alt="Andre's Restaurant" title="Andre's Restaurant" /></a></figure>
-				<div id="logo-circle"></div>
-				<nav>
-				<a class="skip" href="#h-4-5" title="skip to content">Skip to Content</a>
-					<ul id="nav">
-						<li id="nav-l"></li>
-						<li><a href="#">Menu</a></li>
-						<li><a href="#">Specials</a></li>
-						<li><a href="#">Locations</a></li>
-						<li><a href="#">Events</a></li>
-						<li><a href="#">Gift Cards</a></li>
-						<li><a href="#">Careers</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Contest</a></li>
-						<li id="nav-r"></li>
-					</ul>
-				</nav><!-- END navigation -->
-			</div><!-- END container -->
-		</header><!-- END header -->
-		<section>
-			<h2 class="outline">Andre's Restaurant</h2>
-			<h3 class="outline">Fine Dining at it's best!</h3>
-			<div class="full-container clearfix">
-				<div class="row clearfix">
-					<div id="h-5-5-img" class="top img1">
-					</div><!-- END 5-5-->
-				</div><!-- END row -->
-			</div><!-- END img-container -->
-			<div class="container clearfix">
-				<div class="row clearfix">
-					<aside id="h-4-5">
-						<div id="h-4-5-indent">
-							<h2>Lorem Ipsom</h2>
-							<p>In tortor nisi, dignissim id auctor id, sollicitudin at lacus. Aliquam at nisi ante. Suspendisse potenti. Ut non ultrices velit, at vehicula nibh. Ut semper odio ac nisi consequat, vel dapibus odio sagittis. Sed scelerisque augue eu tellus pharetra, sed aliquam dui egestas. Fusce ornare bibendum ex eget eleifend.</p>
-						</div>
-						<div class="left-accent"></div>
-					</aside><!--END 4-5-->
-					<aside id="h-1-5">
-						<div id="h-1-5-indent">
-							<h2>See the Kitchen:</h2>
-							<p>We use a wood-burning oven.</p>
-						</div>
-						<div class="right-accent"></div>
-					</aside><!--END 1-5-link-->
-				</div><!-- END row -->
-			</div><!--END container-->
-			<div class="slim-container clearfix">
-				<div class="row clearfix">
-					<div id="h-5-5">
-						<h2>We Make Pizzas.</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus id libero vitae elementum. Quisque in viverra mauris. Duis aliquam elit et enim feugiat, eget auctor felis mollis. Proin at velit a magna consectetur bibendum. Nunc nec scelerisque nunc, imperdiet ultrices felis. Proin maximus at quam fringilla fermentum. Aenean iaculis non nunc nec pulvinar. Aliquam mi tellus, viverra non vestibulum sit amet, lobortis vitae magna. Morbi aliquam leo nec lacinia ultricies.</p>
-						<p>In tortor nisi, dignissim id auctor id, sollicitudin at lacus. Aliquam at nisi ante. Suspendisse potenti. Ut non ultrices velit, at vehicula nibh. Ut semper odio ac nisi consequat, vel dapibus odio sagittis. Sed scelerisque augue eu tellus pharetra, sed aliquam dui egestas. Fusce ornare bibendum ex eget eleifend.</p>
-						<p>Phasellus a aliquam diam. Quisque sed nisl quis leo vulputate vehicula. Suspendisse euismod arcu vitae porttitor sodales. Donec at condimentum erat. Donec eget tortor eu nisi efficitur congue. Proin mattis nisi faucibus dignissim tincidunt. Pellentesque porta lectus ac tempor pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id consectetur nisi. Maecenas a orci a elit facilisis interdum. Mauris rutrum a leo in egestas. Aliquam posuere, metus vel rhoncus vestibulum, turpis neque dignissim tellus, vitae venenatis libero elit in diam. Ut lectus augue, mollis sit amet dolor ut, cursus mollis sapien. Vivamus varius eu nisl eu ultrices. Suspendisse non rhoncus magna. Etiam rutrum cursus arcu sit amet condimentum.</p>
-					</div><!--END 5-5-->
-				</div><!--END row-->
-			</div><!--END slim-container-->
-		</section><!-- END content section -->
-		<footer>
-			<div class="footer-container">
+@charset "utf-8";
 
-				<!--The footer will include copyright information, a contact us email, rss subscribe feed, twitter and facebook icons. (no actual links required.)-->
+/*  -------------------------  */
+/*  ----------RESET----------  */
+/*  -------------------------  */
 
-				<p>&copy; Andre's Restaurant 2014 | All Rights Reserved</p>
-			</div><!--END footer container-->
-		</footer><!-- END footer -->
-	</body>
-</html>
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public dosection)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a, a:hover {
+	text-decoration: none; 
+}
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+/*  -------------------------  */
+/*  -----GENERAL STYLING-----  */
+/*  -------------------------  */
+
+html {
+	font-size: 1em;
+	line-height: 1.3;
+}
+
+h1 { font-size: 30px; font-size: 1.875rem; line-height: 1.5; }
+h2 { font-size: 26px; font-size: 1.625rem; line-height: 1; }
+h3 { font-size: 22px; font-size: 1.375rem; line-height: 1.2; }
+h4 { font-size: 18px; font-size: 1.125rem; line-height: 1.125; }
+h5 { font-size: 16px; font-size: 1rem; line-height: 1.125; }
+h6 { font-size: 14px; font-size: 0.875rem; line-height: 1.125; }
+p { font-size: 16px; font-size: 1rem; line-height: 1.3; }
+
+body {
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden; /*Stop accents from creating horizontal scrolling*/
+}
+
+/*  ----------CONTAINERS---------  */
+
+.slim-container {
+	margin: 0 auto;
+	width: 660px;
+}
+
+.container {
+	margin: 0 auto;
+	width: 960px;
+}
+
+.header-container, .footer-container {
+	margin: 0 auto;
+	width: 1200px;
+	position: relative;
+}
+
+.full-container {
+	width: 100%;
+}
+
+/*  ----------ACCESSIBILITY---------  */
+
+.skip, .outline {
+	left: -9999px;
+	position: absolute;
+}
+
+a:focus {
+	outline: gray solid 2px;
+}
+
+/*  ----------CLEARFIX---------  */
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+/*  -------------------------  */
+/*  ----------HEADER---------  */
+/*  -------------------------  */
+
+/*  ----------HEADER IMAGES + BORDER---------  */
+
+#header {
+	position: absolute;
+	margin: 0 0 20px 0;
+	width: 100%;
+	background: #ffffff;
+	transform: translate(0, 30%);
+	z-index: 1;
+}
+
+/*  ----------LOGO---------  */
+
+#logo {
+	margin: 0;
+	display: inline-block;
+	width: 220px;
+	position: absolute;
+	left: 40px;
+	top: 25px;
+	z-index: 3;
+}
+
+#logo img {
+	width: 100%;
+}
+
+#logo-circle {
+	margin: 0;
+	display: inline-block;
+	width: 120px;
+	height: 50px;
+	position: absolute;
+	left: 28px;
+	top: -13px;
+	z-index: 2;
+	background: #ffffff;
+	padding: 90px 60px 0 60px;
+	border-radius: 50%;
+}
+
+/*  ----------MAIN NAVIGATION---------  */
+
+nav {
+	display: inline-block;
+	float: right;
+	padding: 0 5px;
+	background: #ffffff;
+	border-top: 5px solid #ffffff;
+	border-bottom: 5px solid #ffffff;
+}
+
+nav ul {
+	margin: 28px 0;
+	position: relative;
+	display: inline-block;
+}
+
+nav ul li {
+	margin: 0;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+nav ul li a {
+	color: #fff;
+	background: #fdbb3b;
+	padding: 25px 10px;
+}
+
+nav ul li a:hover {
+	background: #d9d9d9;
+}
+
+/*  ----------MAIN NAVIGATION ACCENTS---------  */
+
+#nav-r {
+	width: 5000px;
+	height: 50px;
+	position: absolute;
+	padding: 18px 0;
+	top: -33px;
+	right: -5005px;
+	background-color: #ffffff;
+}
+
+#nav-l {
+	width: 5000px;
+	height: 50px;
+	position: absolute;
+	padding: 18px 0;
+	top: -33px;
+	left: -5005px;
+	background-color: #ffffff;
+}
+
+/*  -------------------------  */
+/*  ---------CONTENT---------  */
+/*  -------------------------  */
+
+section {
+	padding-top: 90px; /*makes a buffer for fixed header and written content*/
+	overflow: hidden; /*Stop accents from creating horizontal scrolling*/
+}
+
+/*  ----------ROW CLEAR + END ZONE---------  */
+
+.row {
+	margin: 3px 0;
+	position: relative;
+	clear: both;
+}
+
+.top {
+	margin-top: -100px; /*add class to pull content to very top of page (under fixed header)*/
+}
+
+.end {
+	margin-bottom: 50px;
+}
+
+/*  -------------------HIGHLIGHTS + ACCENTS-----------------  */
+
+/*  ----------MAIN CONTENT ACCENTS---------  */
+
+.right-accent {
+	width: 9999px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: -9999px;
+	background-color: #fdbb3b;
+}
+
+.left-accent {
+	width: 9999px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -9999px;
+	background-color: #fdbb3b;
+}
+
+.top-accent {
+	height: 9999px;
+	width: 100%;
+	position: absolute;
+	top: -9999px;
+	left: 0;
+	background-color: #fdbb3b;
+}
+
+/*  ----------HIGHTLIGHT 5-5 IMAGES---------  */
+
+#h-5-5-img {
+	height: 500px;
+	width: 100%;
+	background-size: cover;
+}
+
+.img1 {
+	background-image: url(images/img1.jpg);
+}
+
+.img2 {
+	background-image: url(images/img2.jpg);
+}
+
+.img3 {
+	background-image: url(images/img3.jpg);
+}
+
+/*  ----------HIGHTLIGHT 5-5---------  */
+
+#h-5-5 {
+	padding: 30px;
+
+}
+
+#h-5-5 h2 {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+#h-5-5 p {
+	font-weight: 600;
+	margin: 10px 0 0 0;
+}
+
+/*.slim-container .right-accent, .slim-container .left-accent {
+	background: #eeeeee;
+}*/
+
+/*  ----------HIGHTLIGHT 4-5---------  */
+
+#h-4-5 {
+	color: #fff;
+	background-color: #fdbb3b;
+	margin: 2px 2px 2px 0;
+	width: 79.65%;
+}
+
+#h-4-5 h2 {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+#h-4-5 p {
+	font-weight: 600;
+	margin: 10px 0 0 0;
+}
+
+#h-4-5-indent {
+	padding: 25px 0;
+	margin: 10px 20px 0 0;
+}
+
+/*  ----------HIGHLIGHT 1-5---------  */
+
+#h-1-5 {
+	color: #fff;
+	background-color: #fdbb3b;
+	width: 20%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+#h-1-5 h2 {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+#h-1-5 p {
+	font-weight: 600;
+	margin: 10px 0 0 0;
+}
+
+#h-1-5-indent {
+	margin: 20px;
+}
+
+/*  ----------HIGHLIGHT 1-5-link---------  */
+
+#h-1-5-link {
+	background-color: #929292;
+	margin: 0;
+	width: 20%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.h-1-5-link {
+	background-color: #929292;
+}
+
+#h-1-5-link h4 {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+#h-1-5-link p {
+	font-weight: 600;
+	margin: 10px 0 0 0;
+}
+
+#h-1-5-link a {
+	color: #fff;
+}
+
+#h-1-5-link a:hover {
+	color: #eee;
+}
+
+#h-1-5-link-indent {
+	padding: 25px 3px 25px 20px;
+}
+
+/*  -----------------------PAGE HEADER--------------------  */
+
+.page-header {	
+	position: relative;
+	padding: 165px 0 0 0;
+	display: block;
+	background: #fdbb3b;
+}
+
+.page-header h2 {
+	text-transform: uppercase;
+	color: #fdbb3b;
+	font-size: 30px; 
+	font-size: 1.875rem;
+	line-height: 1.5;
+	font-weight: 600;
+	display: inline-block;
+	background: #ffffff;
+	padding: 10px 10px 0 10px;
+	margin: 0 0 0 30px;
+	border-radius: 25% 25% 0 0;
+}
+
+
+/*  -------------------------  */
+/*  ----------FOOTER---------  */
+/*  -------------------------  */
+
+footer {
+	background: #fdbb3b;
+}
+
+footer p {
+	color: #fff;
+	padding: 20px;
+	font-weight: 600;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
