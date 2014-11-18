@@ -1,5 +1,5 @@
 ## Group Final Project – Andre’s Restaurant
-
+View demo https://rawgit.com/JavaRama/Andres-Restaurant/master/index.html
 
 #### Course: HTTP 5103 – Web Programming
 #### Due: 11:59pm on Wednesday, December 10th, 2014
