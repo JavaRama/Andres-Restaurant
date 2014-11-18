@@ -123,30 +123,29 @@ a:focus {
    height: 0;
    clear: both;
 }
+
 /*  -------------------------  */
 /*  ----------HEADER---------  */
 /*  -------------------------  */
 
-/*  ----------HEADER IMAGES + BORDER---------  */
+/*  ----------HEADER IMAGE`S + BORDER---------  */
 
 #header {
 	position: absolute;
-	margin: 0 0 20px 0;
+	margin: 0;
 	width: 100%;
 	background: #ffffff;
-	transform: translate(0, 30%);
+	/*transform: translate(0, 30%);*/
 	z-index: 1;
+	text-align: center;
 }
 
 /*  ----------LOGO---------  */
 
 #logo {
-	margin: 0;
+	margin: 20px 0 12px 0;
 	display: inline-block;
 	width: 220px;
-	position: absolute;
-	left: 40px;
-	top: 25px;
 	z-index: 3;
 }
 
@@ -173,10 +172,11 @@ a:focus {
 nav {
 	display: inline-block;
 	float: right;
-	padding: 0 5px;
-	background: #ffffff;
-	border-top: 5px solid #ffffff;
-	border-bottom: 5px solid #ffffff;
+	background: #fdbb3b;
+	/*border-top: 2px solid #5b5a5b;
+	border-right: 2px solid #5b5a5b;
+	border-left: 2px solid #5b5a5b;)*/
+	width: 100%;
 }
 
 nav ul {
@@ -194,12 +194,12 @@ nav ul li {
 
 nav ul li a {
 	color: #fff;
-	background: #fdbb3b;
-	padding: 25px 10px;
+	padding: 29px 15px;
 }
 
 nav ul li a:hover {
-	background: #d9d9d9;
+	background: #fff;
+	color: #fdbb3b;
 }
 
 /*  ----------MAIN NAVIGATION ACCENTS---------  */
@@ -229,7 +229,7 @@ nav ul li a:hover {
 /*  -------------------------  */
 
 section {
-	padding-top: 90px; /*makes a buffer for fixed header and written content*/
+	padding-top: 165px; /*makes a buffer for fixed header and written content*/
 	overflow: hidden; /*Stop accents from creating horizontal scrolling*/
 }
 
@@ -239,10 +239,6 @@ section {
 	margin: 3px 0;
 	position: relative;
 	clear: both;
-}
-
-.top {
-	margin-top: -100px; /*add class to pull content to very top of page (under fixed header)*/
 }
 
 .end {
@@ -283,22 +279,37 @@ section {
 /*  ----------HIGHTLIGHT 5-5 IMAGES---------  */
 
 #h-5-5-img {
-	height: 500px;
-	width: 100%;
+	width: 1000%;
 	background-size: cover;
+	-webkit-transition:all 1s ease-out;
+      -moz-transition:all 1s ease-out;
+      -ms-transition:all 1s ease-out;
+      -o-transition:all 1s ease-out; 
+      transition:all 1s ease-out;
+      transform: translate(0px, 0px);
 }
 
-.img1 {
-	background-image: url(images/img1.jpg);
+#h-5-5-img li img {
+	width: 100%;
 }
 
-.img2 {
-	background-image: url(images/img2.jpg);
+#slide1 {
+	display: block;
+	float: left;
+}
+#slide2 {
+	display: block;
+	float: left;
+}
+#slide3 {
+	display: block;
+	float: left;
+}
+#slide4 {
+	display: block;
+	float: left;
 }
 
-.img3 {
-	background-image: url(images/img3.jpg);
-}
 
 /*  ----------HIGHTLIGHT 5-5---------  */
 
@@ -409,12 +420,25 @@ section {
 	padding: 25px 3px 25px 20px;
 }
 
+#prevBtn {
+	position: absolute;
+	top: 50%;
+	left: 15px;
+}
+
+#nextBtn {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+}
+
+
 /*  -----------------------PAGE HEADER--------------------  */
 
 .page-header {	
 	position: relative;
-	padding: 165px 0 0 0;
 	display: block;
+	margin: 10px 0 0 0;
 	background: #fdbb3b;
 }
 
@@ -427,9 +451,8 @@ section {
 	font-weight: 600;
 	display: inline-block;
 	background: #ffffff;
-	padding: 10px 10px 0 10px;
+	padding: 5px 10px 0 10px;
 	margin: 0 0 0 30px;
-	border-radius: 25% 25% 0 0;
 }
 
 
