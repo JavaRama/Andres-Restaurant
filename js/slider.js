@@ -7,13 +7,14 @@ function pageInit() {
   var currentPrev = 0;
   var currentInterval = windowWidth;
 
-  var ulSlider = document.getElementById("h-5-5-img");
-  var slideArray = ["slide1", "slide2", "slide3", "slide4"];
+    var ulSlider = document.getElementById("h-5-5-img");
   
   var slideOne = document.getElementById("slide1");
   var slideTwo = document.getElementById("slide2");
   var slideThree = document.getElementById("slide3");
   var slideFour = document.getElementById("slide4");
+
+  var slideArray = [slideOne, slideTwo, slideThree, slideFour];
 
   var nextBtn = document.getElementById("nextBtn");
   var prevBtn = document.getElementById("prevBtn");
