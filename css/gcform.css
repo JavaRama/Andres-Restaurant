@@ -1,0 +1,227 @@
+#form_wrapper {position: relative; width:100%;}
+.il_gcform {
+	margin: 20px 14px;
+	padding: 0 0 20px 0;
+}
+
+.gcform_field {
+	border: 1px #fdbb3b solid;
+}
+.il_gcform ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.il_gcform li {
+	margin: 0;
+	padding: 7px 1% 7px 1%;
+	clear: both;
+
+}
+
+.il_gcform .lastchild {margin-bottom: 55px;}
+
+
+.il_gcform li div {
+	margin: 0;
+	padding: 0;
+	color: #929292;
+}
+form li span {
+	float: left;
+	color: #929292;
+	margin: 0 20px 0 0;
+	padding: 0;
+	
+}
+form li div span {
+	width: 100%;
+	float: left;
+	margin: 0;
+	display: block;
+	
+}
+
+form li.address {
+	padding-bottom: 0;
+}
+form li.address div span {
+	width: auto;
+	margin: 0;
+	margin-right: 0.3em;
+	padding-bottom: 15px;
+}
+form li.address div span.full {
+	margin: 0;
+}
+form li.address div span.left, form li.address div span.right {
+	margin: 0;
+	width: 47%;
+}
+form li.address .full input,
+ form li.address .full select,
+  form li.address .left input,
+   form li.address .right input,
+    form li.address .left select,
+	 form li.address .right select {
+	width: 100%;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both !important;
+}
+label span, .section span, p span {
+	display: inline;
+	float: none;
+}
+form li div label, form li span label {
+	margin: 0;
+	padding-top: 3px;
+	clear: both;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	color: #929292;
+	display: block;
+}
+
+label.title_labels {
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 2em;
+	color: #fdbb3b;
+	margin: 0;
+	padding: 0 0 5px 0;
+	border: none;
+	display: block;
+	width: 100%
+}
+
+.symbol {
+	font-size: 1.3em;
+}
+/*---For event booking------*/
+form li .datepicker {
+	float: left;
+	margin: .19em 5px 0 0;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+	cursor: pointer !important;
+}
+
+input.text, select.select {
+	font-family: "Lucida Grande", Tahoma, Arial, sans-serif;
+	font-size: 100%;
+	color: #333;
+	margin: 0;
+	padding: 2px 0;
+}
+input.text {
+	border-top: 1px solid #fdbb3b;
+	border-left: 1px solid #fdbb3b;
+	border-right: 1px solid #fdbb3b;
+	border-bottom: 1px solid #fdbb3b;
+}
+
+select.select {
+	padding: 1px 0 0 0
+}
+
+/*----For event booking form----------*/
+input.checkbox, input.radio {
+	display: block;
+	margin: 4px 0 0 0;
+	padding: 0;
+	width: 13px;
+	height: 13px
+}
+
+
+.full {
+	width: 100% !important
+}
+
+form li.buttons {
+	width: auto !important;
+	position: relative;
+	clear: both;
+	padding: 10px 1% 10px 1%
+}
+form li.buttons input {
+	font-size: 100%;
+	margin-right: 5px
+}
+input.btTxt {
+	padding: 0 7px;
+	width: auto;
+	overflow: visible
+}
+
+.error{
+	color: #DF0000 !important;
+	font-weight: bold !important
+}
+
+.inactive {visibility: hidden;}
+#overlay{
+    position   : fixed;
+    top        : 0;
+    left       : 0;
+    width      : 100%;
+    height     : 100%;
+    background : #000;
+    opacity    : 0.6;
+    filter     : alpha(opacity=60);
+    z-index    : 10;
+    display    : none;
+}
+#thankyou {
+	position: fixed; 
+	top: 50%; 
+	left: 50%; 
+	background-image:url(../images/gc_bkg.jpg);
+	-webkit-box-shadow: 6px 6px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    6px 6px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         6px 6px 5px 0px rgba(50, 50, 50, 0.75);	
+	width: 750px; 
+	height: 500px; 
+	margin-top: -250px;
+	margin-left: -375px;
+	z-index: 15;
+	text-align:center;
+	border-radius: 50%;
+	overflow: hidden;
+	}
+#message_screen {
+	background : #000;
+    opacity    : 0.7;
+    filter     : alpha(opacity=60);
+	height: 200px;
+	top: 300px;
+	left:0;
+	position:absolute;
+	width: 100%;
+	z-index: 20;
+	
+}
+#thankyou_message {
+	height: 200px;
+	padding: 10px 5%;
+	width: 90%;
+	top: 300px;
+	position:absolute;
+	text-align:center;
+	z-index: 25;
+}
+#personal_message {
+	color: #fdbb3b;
+	font-size: 2em;
+	padding-bottom: 10px;
+}
+.active {visibility:visible;}
+
