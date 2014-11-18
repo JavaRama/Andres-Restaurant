@@ -210,7 +210,7 @@ function pageOnload(){
 		noErrors = validatephone(document.gcform.gcform_phone_pu);
 		noErrors = validateemail(document.gcform.gcform_email_pu);
 		
-		if(!noErrors){
+		if(noErrors){
 		document.getElementById("overlay").style.display = "block";
 		document.getElementById("thankyou").className = "active";
 		document.getElementById("personal_message").innerHTML = "Thank you " + document.gcform.gcform_fname_pu.value +
