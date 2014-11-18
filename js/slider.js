@@ -7,7 +7,7 @@ function pageInit() {
   var currentPrev = 0;
   var currentInterval = windowWidth;
 
-    var ulSlider = document.getElementById("h-5-5-img");
+  var ulSlider = document.getElementById("h-5-5-img");
   
   var slideOne = document.getElementById("slide1");
   var slideTwo = document.getElementById("slide2");
