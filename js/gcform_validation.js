@@ -1,5 +1,7 @@
 window.onload=pageOnload;
 
+	var noErrors = true;
+
 	var moneyReg = /^\d*\.?\d*$/;
 	var streetAddressReg = /^\d{1,5}.?\d{0,3}\s[a-zA-Z0-9]{2,30}\s[a-zA-Z]{2,15}\.?$/;
 	var cityReg = /^[a-zA-Z]+((\s|\-)[a-zA-Z]+)?$/;
@@ -24,6 +26,7 @@ window.onload=pageOnload;
 		fieldtofix.style.background = "red";
 		fieldtofix.value = "";
 		fieldtofix.focus();
+		noErrors = false;
 		console.log(fieldtofix.name + "  is invalid");
 
 	}
@@ -140,7 +143,9 @@ window.onload=pageOnload;
 		document.getElementById("err_"+countryfield.name).innerHTML = " &nbsp;&nbsp; *Please select a country from the list";
 		countryfield.style.background = "red";
 		countryfield.focus();
-		console.log(countryfield.name + "  is invalid");
+		noErrors = false;
+		console.log(countryfield.name + "  is invalid" + " " + noErrors);
+
 		return false;
 		}
 		else
@@ -186,31 +191,27 @@ function pageOnload(){
 			selectTagsArray[k].style.background = "white";
 		}
 		
-		var noErrors = true;
-		
+		noErrors = true;
 			
-		noErrors = validatemoney(document.gcform.gcform_amount);
-		noErrors = validatename(document.gcform.gcform_fname);
-		noErrors = validatename(document.gcform.gcform_lname);
-		noErrors = validateaddress(document.gcform.gcform_shipaddr);
-		//validateaddress(document.gcform.gcform_shipaddr2);
-		noErrors = validatecity(document.gcform.gcform_city);
-		noErrors = validateprovince(document.gcform.gcform_prov);
-		noErrors = validatepostal(document.gcform.gcform_postal);
-		noErrors = validatecountry(document.gcform.gcform_country);
+		    validatemoney(document.gcform.gcform_amount);
+			validatename(document.gcform.gcform_fname);
+		    validatename(document.gcform.gcform_lname);
+		    validateaddress(document.gcform.gcform_shipaddr);
+		    validatecity(document.gcform.gcform_city);
+		    validateprovince(document.gcform.gcform_prov);
+		    validatepostal(document.gcform.gcform_postal);
+		    validatecountry(document.gcform.gcform_country);
+			validatename(document.gcform.gcform_fname_pu);
+		    validatename(document.gcform.gcform_lname_pu);
+  		    validateaddress(document.gcform.gcform_addr_pu);
+		    validatecity(document.gcform.gcform_city_pu);
+		    validateprovince(document.gcform.gcform_prov_pu);
+		    validatepostal(document.gcform.gcform_postal_pu);
+		    validatecountry(document.gcform.gcform_country_pu);
+		    validatephone(document.gcform.gcform_phone_pu);
+		    validateemail(document.gcform.gcform_email_pu);
 		
-		noErrors = validatename(document.gcform.gcform_fname_pu);
-		noErrors = validatename(document.gcform.gcform_lname_pu);
-  		noErrors = validateaddress(document.gcform.gcform_addr_pu);
-		//validateaddress(document.gcform.gcform_shipaddr2);
-		noErrors = validatecity(document.gcform.gcform_city_pu);
-		noErrors = validateprovince(document.gcform.gcform_prov_pu);
-		noErrors = validatepostal(document.gcform.gcform_postal_pu);
-		noErrors = validatecountry(document.gcform.gcform_country_pu);
-		noErrors = validatephone(document.gcform.gcform_phone_pu);
-		noErrors = validateemail(document.gcform.gcform_email_pu);
-		
-		if(noErrors){
+		if(noErrors == true){
 		document.getElementById("overlay").style.display = "block";
 		document.getElementById("thankyou").className = "active";
 		document.getElementById("personal_message").innerHTML = "Thank you " + document.gcform.gcform_fname_pu.value +
