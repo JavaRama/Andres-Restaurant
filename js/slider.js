@@ -13,7 +13,7 @@ function pageInit() {
   var ulPos = 0;
   var ulSlider = document.getElementById("h-5-5-img");
   var ulArray = ulSlider.children;
-  var time = 2000;
+  var time = 4500;
 
   var nextBtn = document.getElementById("nextBtn");
   var pauseBtn = document.getElementById("pauseBtn");
