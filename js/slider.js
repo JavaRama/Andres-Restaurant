@@ -1,30 +1,30 @@
+/* JavaRama 
+-- Andre's Restaurant 
+-- Final Project  
+-- HTTP 5103  */
+
+/* ----- SLIDER ------ */
+
 window.onload = pageInit;
 function pageInit() {
 
   var windowWidth = window.innerWidth;
-  var ulWidth = windowWidth;
-  var currentNext = windowWidth;
-  var currentPrev = 0;
-  var currentInterval = windowWidth;
 
+  var ulPos = 0;
   var ulSlider = document.getElementById("h-5-5-img");
-  
-  var slideOne = document.getElementById("slide1");
-  var slideTwo = document.getElementById("slide2");
-  var slideThree = document.getElementById("slide3");
-  var slideFour = document.getElementById("slide4");
-
-  var slideArray = [slideOne, slideTwo, slideThree, slideFour];
+  var ulArray = ulSlider.children;
+  var time = 2000;
 
   var nextBtn = document.getElementById("nextBtn");
+  var pauseBtn = document.getElementById("pauseBtn");
+  var playBtn = document.getElementById("playBtn");
   var prevBtn = document.getElementById("prevBtn");
+  
+  for (var i = 0; i < ulArray.length; i++) {
+    ulArray[i].style.width = windowWidth + "px";
+  }
 
-  slideOne.style.width = windowWidth + "px";
-  slideTwo.style.width = windowWidth + "px";
-  slideThree.style.width = windowWidth + "px";
-  slideFour.style.width = windowWidth + "px";
-
-  function imgTransform(e, transform) {
+  function ulTransform(e, transform) {
     if (transform === 0) {
       e.style["-webkit-transform"] = "translate(0px, 0px)";
       e.style["-moz-transform"] = "translate(0px, 0px)";
@@ -40,65 +40,53 @@ function pageInit() {
     }
   }
 
-  function imgSliderInterval() {
-    imgTransform(ulSlider, ulWidth);
-    if (ulWidth < windowWidth * (slideArray.length - 1)) {
-      ulWidth += windowWidth;
-      currentInterval = ulWidth;
+  function liIncrease() {
+    if (ulPos < windowWidth * (ulSlider.children.length - 1)) {
+      ulPos += windowWidth;
+      ulTransform(ulSlider, ulPos);
     } else {
-      ulWidth = 0;
-    }
-    console.log("Interval: " + currentInterval);
-  }
-
-  function imgSliderNext() {
-    imgTransform(ulSlider, ulWidth);
-    if (ulWidth < windowWidth * (slideArray.length - 1)) {
-      ulWidth += windowWidth;
-    } else {
-      ulWidth = 0;
+      ulPos = 0;
+      ulTransform(ulSlider, ulPos);
     }
   }
 
-  function imgSliderPrev() {
-    if (currentPrev <= currentNext || currentPrev <= currentInterval) {
-      console.log("Next inside Prev:" + currentNext);
-      ulWidth -= (windowWidth * 2);
-      imgTransform(ulSlider, ulWidth);
-      if (ulWidth < 0) {
-        ulWidth = windowWidth * (slideArray.length - 1);
-        imgTransform(ulSlider, ulWidth);
-      }
-    } else if (ulWidth > 0) {
-      ulWidth -= windowWidth;
-      if (ulWidth < 0) {
-        ulWidth = windowWidth * (slideArray.length - 1);
-        imgTransform(ulSlider, ulWidth);
-      } else {
-        imgTransform(ulSlider, ulWidth);
-      }
+  function liNext() {
+    if (ulPos < windowWidth * (ulArray.length -1)) {
+      ulPos += windowWidth;
+      ulTransform(ulSlider, ulPos);
     } else {
-      ulWidth = windowWidth * (slideArray.length - 1);
-      imgTransform(ulSlider, ulWidth);
+      ulPos = 0;
+      ulTransform(ulSlider, ulPos);
     }
   }
 
-  var intervalSlider = setInterval(imgSliderInterval, 3500);
-
-  nextBtn.onclick = function () {
-    clearInterval(intervalSlider);
-    imgSliderNext();
-    currentNext = ulWidth;
-    console.log("Next: " + currentNext);
-    intervalSlider = setInterval(imgSliderInterval, 3500);
+  function liPrev() {
+     if (ulPos <= 0) {
+      ulPos = windowWidth * (ulArray.length - 1);
+      ulTransform(ulSlider, ulPos);
+    } else {
+      ulPos -= windowWidth;
+      ulTransform(ulSlider, ulPos);
+    }
   }
 
-  prevBtn.onclick = function () {
-    clearInterval(intervalSlider);
-    imgSliderPrev();
-    currentPrev = ulWidth;
-    console.log("Prev: " + currentPrev);
-    intervalSlider = setInterval(imgSliderInterval, 3500);
-  }
+  var ulInterval = setInterval(liIncrease, time);
 
+  nextBtn.onclick = function() {
+    clearInterval(ulInterval);
+    liNext();
+    ulInterval = setInterval(liIncrease, time);
+  }
+  prevBtn.onclick = function() {
+    clearInterval(ulInterval);
+    liPrev();
+    ulInterval = setInterval(liIncrease, time);
+  }
+  pauseBtn.onclick = function() {
+    clearInterval(ulInterval);
+  }
+  playBtn.onclick = function () {
+    clearInterval(ulInterval);
+    ulInterval = setInterval(liIncrease, time);
+  }
 }
