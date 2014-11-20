@@ -61,7 +61,7 @@ function pageInit() {
     }
   }
 
-  //decrement the position and pass it through ulTransform within the array's range
+  //Decrement the position and pass it through ulTransform within the array's range
   function liPrev() {
      if (ulPos <= 0) {
       ulPos = windowWidth * (ulArray.length - 1);
