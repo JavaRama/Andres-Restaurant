@@ -15,6 +15,7 @@ function pageInit() {
   var ulPos = 0;
   var ulSlider = document.getElementById("h-5-5-img");
   var ulArray = ulSlider.children;
+  console.log(ulArray);
   var time = 4500;
 
   //Set up buttons
@@ -75,28 +76,40 @@ function pageInit() {
   //Set interval with incrementor and interval
   var ulInterval = setInterval(liNext, time);
 
-  //Next Button - clear interval, increment, reset interval
+  //Next Button - clear interval, increment, reset interval (if not paused)
   nextBtn.onclick = function() {
     clearInterval(ulInterval);
     liNext();
-    ulInterval = setInterval(liNext, time);
+    if (pauseBtn.style.display === "none"){
+      clearInterval(ulInterval);
+    } else {
+      ulInterval = setInterval(liNext, time);
+    }
   }
 
-  //Previous Button - clear interval, decrement, reset interval
+  //Previous Button - clear interval, decrement, reset interval (if not paused)
   prevBtn.onclick = function() {
     clearInterval(ulInterval);
     liPrev();
-    ulInterval = setInterval(liNext, time);
+    if(pauseBtn.style.display === "none"){
+      clearInterval(ulInterval);
+    } else {
+      ulInterval = setInterval(liNext, time);
+    }
   }
 
-  //Pause Button - clear the interval
+  //Pause Button - clear the interval and switch the play/pause buttons
   pauseBtn.onclick = function() {
     clearInterval(ulInterval);
+    pauseBtn.style.display = "none";
+    playBtn.style.display = "inline-block";
   }
 
-  //Play Button - reset the interval
+  //Play Button - reset the interval and switch the play/pause buttons
   playBtn.onclick = function () {
     clearInterval(ulInterval);
+    playBtn.style.display = "none";
+    pauseBtn.style.display = "inline-block";
     ulInterval = setInterval(liNext, time);
   }
 }
