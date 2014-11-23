@@ -1,0 +1,193 @@
+/* Game canvas*/
+#game_canvas{
+	height:600px;
+	margin-top: 20px;
+	position: relative;
+	background: white;
+	}
+
+/* variation of .slim container from template
+ It is wider*/
+#contest .slim-container {
+	width: 800px;
+
+	}
+
+/* formatting game instructions*/
+#instructions{
+	margin-bottom: 25px;
+	}
+	
+#instructions h2 {
+	margin-bottom: 20px;
+	}
+
+#instructions p {
+	margin-bottom: 10px;
+	}
+	
+/* ===== GRID AREA =========*/
+
+/* center grid*/
+#grid{
+	width: 750px;
+	margin: auto;
+	}
+
+/* formatting grid cells*/
+#grid li {
+	width: 150px;
+	height: 150px;
+	cursor: pointer;
+	float: left;
+	outline: black solid 1px; /* I used outline to not add pixels to the box model*/ 
+	
+	/* TRANSITION*/
+	
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	
+	/* REMOVE CELLS FROM PAGE...JQUERY WILL PUT THEM BACK ON A COOL WAY*/
+	
+	position: relative;
+	
+
+	}
+
+/* hover effect for grid cells*/	
+ #grid li:hover{
+	opacity: 0.5;
+	 }
+
+/* ========= OUTPUT AREA =========*/
+
+/* formatting output area*/
+#output {
+	width: 750px;
+	clear: both;
+	margin: 10px auto;
+	height: 250px;
+	}
+	
+
+/* div to display the selected toppings*/
+#toppings{
+	float: right;
+	width: 66%;
+	
+	}
+
+/* div that is keeping track of the score*/
+#output_score{
+	text-align: right;
+	float: right;
+	width: 33%;
+}
+
+
+/* formatting for the list of toppings*/
+#output_food li{
+	margin-top: 10px;
+	margin-left: 5px;
+	font-size: 120%;
+	float: left;
+	padding: 10px;
+	background: #fdbb3b;
+}
+
+/* span that is holding the green and red marks related with the toppings*/
+#output_food span{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	margin-left: 10px;
+	background-repeat: no-repeat;
+	background-position: center;
+	}
+
+/* formatting for the win and lose scores*/
+#output_score .win{
+	font-size: 200%;
+	color: green;
+	}
+	
+#output_score .lose{
+	font-size: 200%;
+	color: red;
+	}
+
+/* box that slides in when game is over*/	
+#final_output {
+
+	height: 300px;
+	width: 750px;
+	position: absolute; /* to free the div from the flow of the content*/
+	top: 131px;
+	background-image: url(../images/empty_pizzabox.png);
+	background-color: rgba(253, 187, 59, .8);
+	background-repeat: no-repeat;
+	
+	}
+
+/* end game message formatting */	
+#end_game_message{
+	width: 400px;
+	float: right;
+	margin-top: 80px;
+}
+
+#end_game_message h3,
+#end_game_message p {
+	background: white;
+	color:#FDBB3B;
+	padding-right: 5px;
+	margin-bottom: 5px;
+}
+
+/* ripping off the Humber style for h3 and p*/
+#end_game_message h3{
+	width:350px;
+	font-size: 150%;
+}
+
+#end_game_message p{
+	width: 280px;
+	font-size: 130%;
+}
+
+/* formatting of button*/
+#restart_game{
+	display:block;
+	margin-top: 10px;
+	width: 100px;
+	height: 70px;
+	border: none; /* in order to give height to a button, you have to put border none...*/
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden; /*Stop accents from creating horizontal scrolling*/
+	font-size: 130%;
+	color:#FDBB3B;
+	background: white;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	float: right;
+	margin-right: 20px;
+	cursor: pointer;
+	
+}
+
+/* hover event for button*/
+#restart_game:hover{
+	background:#FDBB3B;
+	color: white;
+}
+
+/* get rid of default focus on mac */
+#restart_game:focus{
+	outline: none;
+}
+
