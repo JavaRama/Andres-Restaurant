@@ -1,0 +1,198 @@
+<!doctype html>
+<html dir="LTR" lang="en-CA">
+	<head>
+		<!-- Main Css -->
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		
+		<!-- Game Css -->
+		<link rel="stylesheet" type="text/css" href="css/game.css" />
+		
+		<!-- Jquery Library -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+		<!-- Jquery for page effects -->
+		<script src="js/game_page.js"></script>
+		
+		<!-- Jquery for Game Logic and some effects related to the game -->
+		<script src="js/game.js"></script>
+		
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Andres Restaurant - Contest</title>
+		<meta content="" name="description">
+		<meta content="restaurant, fine dining, pizza" name="keywords">
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body id="contest">
+		<header id="header" title="Main Header">
+			<h1 class="outline">Andre's Restaurant</h1>
+			<div class="full-container clearfix">
+				<figure id="logo">
+					<a href="index.html"><img src="http://coreystanford.com/wp-content/uploads/2014/11/logo.png" alt="Andre's Restaurant" title="Andre's Restaurant" /></a>
+				</figure>
+				<nav>
+					<a class="skip" href="#h-4-5" title="skip to content">Skip to Content</a>
+					<ul id="nav">
+						<li>
+							<a href="menu.html">Menu</a>
+						</li>
+						<li>
+							<a href="specials.html">Specials</a>
+						</li>
+						<li>
+							<a href="locations.html">Locations</a>
+						</li>
+						<li>
+							<a href="events.html">Events</a>
+						</li>
+						<li>
+							<a href="gift-cards.html">Gift Cards</a>
+						</li>
+						<li>
+							<a href="careers.html">Careers</a>
+						</li>
+						<li>
+							<a href="about.html">About</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>
+						<li>
+							<a href="contest.html">Contest</a>
+						</li>
+					</ul>
+				</nav><!-- END navigation -->
+			</div><!-- END container -->
+		</header><!-- END header -->
+		<section>
+			<h2 class="outline">Andre's Restaurant Menu</h2>
+			<h3 class="outline">Fine Dining at its best!</h3>
+			<div class="full-container clearfix">
+				<div class="page-header">
+					<div class="slim-container">
+						<h2>CONTEST</h2>
+					</div>
+				</div>
+			</div>
+			<div class="slim-container clearfix">
+				<div class="row clearfix">
+					<!-- div that is holding the game -->
+					<div id="game_canvas">
+					<!-- Game instructions -->
+						<div id="instructions">
+							<h2>Get your toppings</h2>
+							<p>
+								Pick five cells from the grid and see what toppings you get. But be careful, some ingredients are more
+								delicious than others. If you get less than two "bad ingredients" your pizza is ok. If you
+								can get 3 good pizzas out of 5 attempts, you win a free one. Good luck!
+							</p>
+						</div>
+						<!-- Game GRid -->
+						<div id="grid_area">
+							<ul id="grid" class="clearfix">
+								<li id="cell_1" class="empty_cell">
+									<img src="images/logo_game.jpg" alt="logo" title="Game Tiles" width="150"  height="150" />
+								</li>
+								<li id="cell_2" class="empty_cell">
+									<img src="images/logo_game.jpg" alt="logo" title="Game Tiles" width="150"  height="150" />
+								</li>
+								<li id="cell_3" class="empty_cell">
+									<img src="images/logo_game.jpg" alt="logo" title="Game Tiles" width="150"  height="150" />
+								</li>
+								<li id="cell_4" class="empty_cell">
+									<img src="images/logo_game.jpg" alt="logo" title="Game Tiles" width="150"  height="150" />
+								</li>
+								<li id="cell_5" class="empty_cell">
+									<img src="images/logo_game.jpg" alt="logo" title="Game Tiles" width="150"  height="150" />
+								</li>
+								<li id="cell_6" class="empty_cell">
+									<img src="images/logo_game.jpg" alt="logo" title="Game Tiles" width="150"  height="150" />
+								</li>
+								<li id="cell_7" class="empty_cell">
+									<img src="images/logo_game.jpg" alt="logo" title="Game Tiles" width="150"  height="150" />
+								</li>
+								<li id="cell_8" class="empty_cell">
+									<img src="images/logo_game.jpg" alt="logo" title="Game Tiles" width="150"  height="150" />
+								</li>
+								<li id="cell_9" class="empty_cell">
+									<img src="images/logo_game.jpg" alt="logo" title="Game Tiles" width="150"  height="150" />
+								</li>
+								<li id="cell_10" class="empty_cell">
+									<img src="images/logo_game.jpg" alt="logo" title="Game Tiles" width="150"  height="150" />
+								</li>
+							</ul>
+
+						</div>
+
+						<!-- Name of toppings and score -->
+						<div id="output">
+							<!-- score -->
+							<div id="output_score" class="clearfix">
+								<p class="win">
+									GOOD PIZZA: 0
+								</p>
+								<p class="lose">
+									BAD PIZZA: 0
+								</p>
+							</div>
+							<!-- topping names -->
+							<div id="toppings" class="clearfix">
+								<h3>Your pizza has:</h3>
+								<ol id="output_food" >
+									<!-- <li> elements will be appended dynamically with Jquery -->
+								</ol>
+							</div>
+						</div>
+						<!-- final screen for when the game is over -->
+						<div id="final_output" class="clearfix">
+							<article id="end_game_message">
+								<h3> Better luck next time my friend</h3>
+								<p>Don't give up and try again</p>
+								<!-- button to restart the game -->
+								<input type="button" id="restart_game" value="Try again"  />
+							</article>
+						</div>
+
+					</div>
+				</div><!--END row-->
+			</div><!--END slim-container-->
+			<div class="container clearfix">
+				<div class="row clearfix">
+					<aside id="h-4-5">
+						<div id="h-4-5-indent">
+							<h2>Lorem Ipsom</h2>
+							<p>
+								In tortor nisi, dignissim id auctor id, sollicitudin at lacus. Aliquam at nisi ante. Suspendisse potenti. Ut non ultrices velit, at vehicula nibh. Ut semper odio ac nisi consequat, vel dapibus odio sagittis. Sed scelerisque augue eu tellus pharetra, sed aliquam dui egestas. Fusce ornare bibendum ex eget eleifend.
+							</p>
+						</div>
+						<div class="left-accent"></div>
+					</aside><!--END 4-5-->
+					<aside id="h-1-5">
+						<div id="h-1-5-indent">
+							<h2>See the Kitchen:</h2>
+							<p>
+								We use a wood-burning oven.
+							</p>
+						</div>
+						<div class="right-accent"></div>
+					</aside><!--END 1-5-link-->
+				</div><!-- END row -->
+			</div><!--END container-->
+		</section><!-- END content section -->
+
+		<footer>
+			<div class="container">
+
+				<!--The footer will include copyright information, a contact us email, rss subscribe feed, twitter and facebook icons. (no actual links required.)-->
+
+				<p>
+					&copy; Andre's Restaurant 2014 | All Rights Reserved
+				</p>
+			</div><!--END footer container-->
+		</footer><!-- END footer -->
+	</body>
+</html>
