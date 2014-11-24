@@ -198,6 +198,32 @@ $(function() {
 		}
 	}
 	
+		function validateselect(selectfield){
+		if(selectfield.options[selectfield.selectedIndex].value === "")
+		{
+		var errSpanName = "#err_"+selectfield.name;
+		var inputFieldId = "#" + selectfield.id;
+		
+	    $(inputFieldId).css({'background':'#fdbb3b'});
+	    $(errSpanName).html('Please select an option');
+		$(errSpanName).show(800);
+
+		//console.log(errSpanName + " display: " + $(errSpanName).css.display);
+		//document.getElementById("err_"+countryfield.name).innerHTML = " &nbsp;&nbsp; *Please select a country from the list";
+		//countryfield.style.background = "red";
+		selectfield.focus();
+		noErrors = false;
+		console.log(selectfield.name + "  is invalid" + " " + noErrors);
+
+		return false;
+		}
+		else
+		{
+			fieldreset(selectfield);
+			return true;
+		}
+	}
+	
 	function validatecountry(countryfield){
 		if(countryfield.options[countryfield.selectedIndex].value === "")
 		{
