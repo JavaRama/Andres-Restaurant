@@ -1,7 +1,14 @@
-#form_wrapper {position: relative; width:100%;}
+#form_wrapper {position: relative; width:100%; }
+.gc_wrapper {
+	background:url(../images/giftcard.png) top right no-repeat; background-size: 50%;
+}
+.event_wrapper {
+	background:url(../images/waiter.png) top right no-repeat; background-size: 50%;
+}
 .il_gcform {
-	margin: 20px 14px;
+	margin: 10px 14px;
 	padding: 0 0 20px 0;
+	width:50%;
 }
 
 .gcform_field {
@@ -34,6 +41,9 @@ form li span {
 	padding: 0;
 	
 }
+form li span.event {
+	width: 100px !important;
+}
 form li div span {
 	width: 100%;
 	float: left;
@@ -45,8 +55,13 @@ form li div span {
 form li.address {
 	padding-bottom: 0;
 }
+
+form li.optional {
+	display: none;
+}
+
 form li.address div span {
-	width: auto;
+	width: 47%;
 	margin: 0;
 	margin-right: 0.3em;
 	padding-bottom: 15px;
@@ -54,7 +69,7 @@ form li.address div span {
 form li.address div span.full {
 	margin: 0;
 }
-form li.address div span.left, form li.address div span.right {
+form li.address div span.left, form li.address div span.right, form li.name span.left, form li.name span.right {
 	margin: 0;
 	width: 47%;
 }
@@ -115,7 +130,7 @@ form li .datepicker {
 }
 
 input.text, select.select {
-	font-family: "Lucida Grande", Tahoma, Arial, sans-serif;
+	font-family: "Open Sans", Helvetica, sans-serif;
 	font-size: 100%;
 	color: #333;
 	margin: 0;
@@ -133,14 +148,24 @@ select.select {
 }
 
 /*----For event booking form----------*/
-input.checkbox, input.radio {
+input.radio {
 	display: block;
+	float: left;
 	margin: 4px 0 0 0;
 	padding: 0;
 	width: 13px;
 	height: 13px
 }
+input[type=checkbox]{
+	
+	float: right;
+	margin: 14px 0 0 0;
+	padding: 0;
+	width: 13px;
+	height: 13px;
+		display: block;
 
+}
 
 .full {
 	width: 100% !important
@@ -164,10 +189,24 @@ input.btTxt {
 
 .error{
 	color: #DF0000 !important;
-	font-weight: bold !important
+	font-weight: 600 !important;
+	display:none;
+	width:100%;
+	font-size:14px;
 }
 
-.inactive {visibility: hidden;}
+#gcform_submit {
+	width: 120px;
+	height: 60px;
+	color: white;
+	padding-top:5px;
+	font-size: 18px;
+	background-color: #fdbb3b;
+	border: none;
+
+}
+
+.inactive {display: none;}
 #overlay{
     position   : fixed;
     top        : 0;
@@ -223,5 +262,5 @@ input.btTxt {
 	font-size: 2em;
 	padding-bottom: 10px;
 }
-.active {visibility:visible;}
+/*.active {visibility:visible;}*/
 
