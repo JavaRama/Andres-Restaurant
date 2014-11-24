@@ -1,9 +1,9 @@
 #form_wrapper {position: relative; width:100%; }
 .gc_wrapper {
-	background:url(../images/giftcard.png) top right no-repeat; background-size: 50%;
+	background:url(http://wikiplay.ca/5103/andres/images/giftcard.png) top right no-repeat; background-size: 50%;
 }
 .event_wrapper {
-	background:url(../images/waiter.png) top right no-repeat; background-size: 50%;
+	background:url(http://wikiplay.ca/5103/andres/images/waiter.png) top right no-repeat; background-size: 50%;
 }
 .il_gcform {
 	margin: 10px 14px;
