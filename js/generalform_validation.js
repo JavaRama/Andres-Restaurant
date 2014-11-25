@@ -234,9 +234,7 @@ $(function() {
 	    $(errSpanName).html('Please select a country');
 		$(errSpanName).show(800);
 
-		//console.log(errSpanName + " display: " + $(errSpanName).css.display);
-		//document.getElementById("err_"+countryfield.name).innerHTML = " &nbsp;&nbsp; *Please select a country from the list";
-		//countryfield.style.background = "red";
+		
 		countryfield.focus();
 		noErrors = false;
 		console.log(countryfield.name + "  is invalid" + " " + noErrors);
@@ -246,6 +244,30 @@ $(function() {
 		else
 		{
 			fieldreset(countryfield);
+			return true;
+		}
+	}
+	// validate pato's select
+	function validateselect(selectfield){
+		if(selectfield.options[selectfield.selectedIndex].value === "")
+		{
+		var errSpanName = "#err_"+selectfield.name;
+		var inputFieldId = "#" + selectfield.id;
+		
+	    $(inputFieldId).css({'background':'#fdbb3b'});
+	    $(errSpanName).html('Please select a subject');
+		$(errSpanName).show(800);
+
+		
+		selectfield.focus();
+		noErrors = false;
+		console.log(selectfield.name + "  is invalid" + " " + noErrors);
+
+		return false;
+		}
+		else
+		{
+			fieldreset(selectfield);
 			return true;
 		}
 	}
