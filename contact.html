@@ -1,0 +1,161 @@
+<!doctype html>
+<html dir="LTR" lang="en-CA">
+	<head>	
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/contact.css">
+		
+		<!-- Jquery Library -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Andres Restaurant - Page Template</title>
+		<meta content="" name="description">
+		<meta content="restaurant, fine dining, pizza" name="keywords">
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body id="contact_form">
+		<header id="header" title="Main Header">
+			<h1 class="outline">Andre's Restaurant</h1>
+			<div class="full-container clearfix">
+				<figure id="logo"><a href="index.html"><img src="http://coreystanford.com/wp-content/uploads/2014/11/logo.png" alt="Andre's Restaurant" title="Andre's Restaurant" /></a></figure>
+				<nav>
+				<a class="skip" href="#h-4-5" title="skip to content">Skip to Content</a>
+					<ul id="nav">
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="specials.html">Specials</a></li>
+						<li><a href="locations.html">Locations</a></li>
+						<li><a href="events.html">Events</a></li>
+						<li><a href="gift-cards.html">Gift Cards</a></li>
+						<li><a href="careers.html">Careers</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="contest.html">Contest</a></li>
+					</ul>
+				</nav><!-- END navigation -->
+			</div><!-- END container -->
+		</header><!-- END header -->
+		<section>
+			<h2 class="outline">Andre's Restaurant Menu</h2>
+			<h3 class="outline">Fine Dining at its best!</h3>
+			<div class="full-container clearfix">
+				<div class="page-header">
+					<div class="slim-container">
+						<h2>CONTACT</h2>
+					</div>
+				</div>
+			</div>
+			<div class="slim-container clearfix">
+				<div class="row clearfix">
+					<!-- Contact Form -->
+					<form action="#" method="post" id="contactForm" name="contactForm">
+						<!-- <ul></ul> to help format the form -->
+						<ul>
+							<!-- First Name -->
+							<li>
+								<label for="first_name">Name</label>
+								<input type="text" name="first_name" id="first_name" onchange="javascript:validatename(this)" />
+								  <div id="err_first_name" class="error_msg"><!-- Error Message --></div>
+							</li>
+							<!-- Last Name -->
+							<li>
+								<label for="last_name">Lastname</label>
+								<input type="text" name="last_name" id="last_name" onchange="javascript:validatename(this)"  />
+								 <div id="err_last_name" class="error_msg"><!-- Error Message --></div>
+							</li>
+							<!-- Email -->
+							<li>
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" onchange="javascript:validateemail(this)" />
+								 <div id="err_email" class="error_msg"><!-- Error Message --></div>
+							</li>
+							<!-- Subject -->
+							<li>
+								<label for="kind_of_feedback">Select a subject</label>
+								<select id="kind_of_feedback" name="kind_of_feedback" onchange="javascript:validateselect(this)">
+									<option value="" selected="selected">==== You want to write a: ====</option>
+									<option value="question">question</option>
+									<option value="suggestion">suggestion</option>
+									<option value="compliment">compliment</option>
+									<option value="inquiry">general inquiry</option>
+								</select>
+								<div id="err_kind_of_feedback" class="error_msg"><!-- Error Message --></div>
+							</li>
+							<!-- Message -->
+							<li>
+								<label for="message">Message</label>
+								<textarea id="message" name="message" onchange="javascript:validatetextarea(this)"></textarea>
+								<div id="err_message" class="error_msg"><!-- Error Message --></div>
+							</li>
+							<!-- Submit Button -->
+							<li id="submit_button">
+								<input type="submit" id="submit" name="submit" value="Submit" />
+							</li>
+							
+						</ul>
+						
+					</form>
+					
+					<!-- Section to output summary -->
+					<section id="contact_form_summary">
+						<!-- Resturant Logo -->
+						<div id="logo_img">
+							<img id="output_msg_logo" src="http://coreystanford.com/wp-content/uploads/2014/11/logo.png" title="logo" alt="Andre's Restaurant Logo" />
+							<!-- Output Message -->
+							<h2>Thank you for your input <span id="form_fname"><!-- Bring value from First Name input Box --></span>
+							<span id="form_name_lname"><!-- Bring value from Last Name input Box --></span> </h2>
+						</div>
+							
+						<p> We really appreciate the time you took to write this <span id="form_subject">
+							<!-- Bring value from select tag --></span> :</p>
+						
+						
+						<blockquote id="form_comment"><!-- Bring value from textarea --></blockquote>
+						
+						
+						<p>We will answer you at the following email: 
+							<span id="contact_form_email"><!-- Bring value from email --></span>
+						</p>
+						<!-- Close Button -->
+						<button id="close" type="button">Close</button>
+											
+					</section>
+				</div><!--END row-->
+			</div><!--END slim-container-->
+			<div class="container clearfix">
+				<div class="row clearfix">
+					<aside id="h-4-5">
+						<div id="h-4-5-indent">
+							<h2>Lorem Ipsom</h2>
+							<p>In tortor nisi, dignissim id auctor id, sollicitudin at lacus. Aliquam at nisi ante. Suspendisse potenti. Ut non ultrices velit, at vehicula nibh. Ut semper odio ac nisi consequat, vel dapibus odio sagittis. Sed scelerisque augue eu tellus pharetra, sed aliquam dui egestas. Fusce ornare bibendum ex eget eleifend.</p>
+						</div>
+						<div class="left-accent"></div>
+					</aside><!--END 4-5-->
+					<aside id="h-1-5">
+						<div id="h-1-5-indent">
+							<h2>See the Kitchen:</h2>
+							<p>We use a wood-burning oven.</p>
+						</div>
+						<div class="right-accent"></div>
+					</aside><!--END 1-5-link-->
+				</div><!-- END row -->
+			</div><!--END container-->
+		</section><!-- END content section -->
+
+		<footer>
+			<div class="container">
+
+				<!--The footer will include copyright information, a contact us email, rss subscribe feed, twitter and facebook icons. (no actual links required.)-->
+
+				<p>&copy; Andre's Restaurant 2014 | All Rights Reserved</p>
+			</div><!--END footer container-->
+		</footer><!-- END footer -->
+		<script src="js/generalform_validation.js"></script>
+		
+		<script src="js/contact.js"></script>
+	</body>
+</html>
