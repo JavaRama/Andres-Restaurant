@@ -1,0 +1,135 @@
+/*======= QUICK FIX ========*/
+#contact_form .row {
+position: relative; /* to create boundaries for my absolute position #contact_form_summary section*/
+}
+
+/*======= CONTACT FORM ========*/
+
+#contact_form form {
+	margin-top: 20px;
+}
+
+/* formatting unordered list that is holding the form input, textarea and select*/
+#contact_form form li {
+	margin: 15px 0;
+}
+
+/* formatting labels*/
+#contact_form label{
+	display: block;
+	color: #fdbb3b;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding: 0 0 5px 0;
+}
+
+/* formatting error messages */
+#contact_form form .error_msg{
+	display: none;
+	text-align: right;
+	margin-top: 10px;
+}
+
+/* formatting inputs*/
+#contact_form form input {
+	height: 24px;
+}
+
+/* formatting input, textarea, select on focus*/
+#contact_form form input:focus,
+#contact_form form textarea:focus,
+#contact_form form select:focus{
+	outline: rgba(253, 187, 59, .6) solid 3px;
+}
+
+/* formatting inputs (except submit), textarea and select*/
+#contact_form form input[type="text"],
+#contact_form form input[type="email"],
+#contact_form form textarea,
+#contact_form form select {
+	border: 1px solid #fdbb3b;
+	font-size: 100%;
+}
+
+/* this disables the browser width resize of inputs and textarea*/
+#contact_form form input[type="text"],
+#contact_form form input[type="email"],
+#contact_form form textarea {
+	padding: 5px;
+	max-width: 100%;
+	min-width: 100%;
+	
+}
+
+/* this disables the browser height resize of inputs and textarea*/
+#contact_form form textarea{
+	min-height: 200px;
+	max-height: 200px;
+}
+
+/* formatting submit button*/
+#contact_form form #submit_button {
+	text-align: right;
+}
+
+/* ======== FORM SUMMARY ========== */
+
+/* formatting of message box*/
+#contact_form section#contact_form_summary {
+	padding-top: 0;
+	width: 100%; 
+	position: absolute;
+	top: 10px;
+	left: 0;
+	background: rgba(255,255,255,1);
+	padding: 10px;
+	display: none;
+	-webkit-border-radius: 25%;
+	-moz-border-radius: 25%;
+	border-radius: 25%;
+	border: 1px solid #fdbb3b;
+}
+
+/* formatting div is holding image*/
+#logo_img {
+	width: 500px;
+	margin: auto;
+}
+
+/* formatting the logo image*/
+img#output_msg_logo{
+	display: block;
+	margin: auto;
+}
+
+/* formatting message title*/
+#contact_form section#contact_form_summary h2{
+	font-size:300%;
+	width: 500px;
+	margin: 20px auto;
+}
+
+/* formatting message*/
+#contact_form section#contact_form_summary p{
+	font-size:150%;
+	text-align: justify;
+	width: 500px;
+	margin: auto;
+	
+}
+
+/* formatting the output for the user message*/
+#contact_form section#contact_form_summary blockquote{
+	font-size:130%;
+	color:#929292;
+	font-style: italic;
+	width: 500px;
+	margin: 20px auto;
+}
+
+/* formatting close button*/
+#contact_form button{
+	float: right;
+	margin-right: 100px;
+	margin-top: 10px;
+}
