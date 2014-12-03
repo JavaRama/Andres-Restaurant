@@ -1,0 +1,102 @@
+.slmenu{
+	margin:0 auto;
+	height: 800px;
+	width: 675px;
+	border: 1px solid black;
+	font-family: Copperplate Gothic Light;
+	background-color: #FFFFEB;
+}
+#appetizers{
+	padding-top:100px;
+	position:relative;
+	text-align:center;
+}
+#Entrees{
+	position:relative;
+	text-align:center;
+	
+}
+#Desserts{
+	position: relative;
+	text-align: center;
+}
+#dEntree{
+font-size:14px;
+color: grey;
+font-style: italic;
+padding-bottom:15px;
+padding: 0px 10px;
+}
+#dApp{
+font-size:14px;
+color: grey;
+font-style: italic;
+padding-bottom:15px;
+}
+h5
+{
+text-transform: uppercase;
+padding-bottom:0px;
+font-size:14px;
+}
+.slh4{ 
+padding:10px;
+font-weight:bold;
+text-transform:uppercase;
+color:#A30000;
+}
+.subtitle
+{
+text-decoration:underline;
+padding-bottom:10px;
+font-size:16px;
+}
+#caption{
+color:black; 
+font-size:14px;
+font-style: italic;
+margin-top:10px;
+padding-bottom:25px;
+}
+.dessert-item{
+font-size:14px;
+padding-bottom:5px;
+}
+#date{
+text-align: center;
+padding-top: 25px;
+margin-top:55px;
+font-size:30px;
+color:#A30000;
+font-style: italic;
+text-decoration:underline;
+}
+#specials{
+text-align: center;
+font-style: italic;
+color: grey;
+}
+#logo-bottom{
+position:absolute;
+bottom:80px;
+left:270px;
+width:30%;
+height:auto;
+margin-bottom:1px;
+}
+.li-week
+{
+ padding:5px 3px;
+ font-family: Copperplate Gothic Light;
+ font-size: 18px;
+ color:#A30000;
+}
+#weekly-specials{
+display:none;
+}
+#week-title{
+ font-family: Copperplate Gothic Light;
+ font-size: 18px;
+ text-transform:uppercase;
+ color:#A30000;
+}
