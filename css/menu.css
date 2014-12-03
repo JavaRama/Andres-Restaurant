@@ -1,0 +1,65 @@
+.slmenu{
+	margin:0 auto;
+	height: 950px;
+	width: 725px;
+	border: 1px solid black;
+	font-family: Copperplate Gothic Light;
+	background-color: #FFFFEB;
+	display:none;
+}
+#appetizers{
+	padding-top:40px;
+	position:relative;
+	text-align:center;
+}
+#Entrees{
+	position:relative;
+	text-align:center;
+	
+}
+#Desserts{
+	position: relative;
+	text-align: center;
+}
+.desc{
+font-size:12px;
+color: grey;
+font-style: italic;
+padding-bottom:8px;
+}
+h5
+{
+text-transform: uppercase;
+padding-bottom:0px;
+font-size:14px;
+}
+.slh4{ 
+padding:13px;
+font-weight:bold;
+text-transform:uppercase;
+color:#A30000;
+}
+.subtitle
+{
+text-decoration:underline;
+padding-bottom:10px;
+font-size:20px;
+}
+#caption{
+color:black; 
+font-size:14px;
+font-style: italic;
+margin-top:10px;
+padding-bottom:25px;
+}
+.dessert-item{
+font-size:14px;
+padding-bottom:5px;
+}
+#logo-bottom{
+float:right;
+margin-top:-20px;
+padding:0px 20px;
+width:30%;
+height:auto;
+}
