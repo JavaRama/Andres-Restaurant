@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/*About Us - Story - Our Team*/
+
+#aboutUs
+{
+	height: 150px;
+	width: 150px;
+	border: 2px solid #E0E0E0;
+	float:left;
+	margin-top: 40px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 83px;
+	cursor: pointer;
+}
+
+#OurTeam
+{
+	height: 150px;
+	width: 150px;
+	border: 2px solid #E0E0E0;
+	border-radius: 50%;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.team
+{
+	display: none;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: -20px;
+	opacity:0.7;
+}
+
+
+
+
+#Story
+{
+	height: 150px;
+	width: 150px;
+	border: 2px solid #E0E0E0;
+	float:right;
+	margin-right: -20px;
+	display: inline-block;
+	margin-top: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.heading_about
+{
+	/*border:1px dashed red;*/
+	text-align: center;
+	padding: 50px 5px 10px 5px;
+	font-size: 22px;
+}
+
+/*Main Container*/
+
+#pizza-container
+{
+	border:10px solid #fdbb3b;
+	border-radius: 50%;
+	width:600px;
+	height: 600px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+#about_container
+{
+	/*border: 1px dashed red;*/
+	padding: 50px;
+	margin-top: 95px;
+}
+
+.p_content
+{
+	/*border:1px dashed red;*/
+	text-align: center;
+	line-height: 35px;
+}
+
+/*================TimeLine=================*/
+/*=========================================*/
+#timeline
+{
+	display: none;
+	border-top: 2px solid #fdbb3b;
+	margin: 0 auto;
+	margin-top: 100px;
+	width: 400px;
+	height: auto;
+	z-index: 1;
+}
+
+.l_1984, .l_1990, .l_1999, .l_2005
+{
+	border: 1px solid #fdbb3b;
+	width:15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #fdbb3b;	
+	z-index: 2;
+	margin-top: -10px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.l_1984
+{
+	margin-left: 0px;
+	background: #252b30;
+}
+
+.l_1990
+{
+	margin-left: 133px;
+}
+
+.l_1999
+{
+	margin-left: 267px;
+}
+
+.l_2005
+{
+	margin-left: 400px;
+}
+
+.p_1984
+{
+	/*border: 1px dashed red;*/
+	position: absolute;
+	margin-left: -10px;
+	margin-top: 10px;
+}
+
+.p_1990
+{
+	display: none;
+	position: absolute;
+	margin-left: 120px;
+	margin-top: 10px;
+}
+
+.p_1999
+{
+	display: none;
+	position: absolute;
+	margin-left: 255px;
+	margin-top: 10px;
+}
+
+.p_2005
+{
+	display: none;
+	position: absolute;
+	margin-left: 390px;
+	margin-top: 10px;
+}
