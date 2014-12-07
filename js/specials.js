@@ -1,8 +1,11 @@
+//Creates an onload function
 window.onload = function(){
+//Used the date function to get the day and month
 var dateVar = new Date();
 changedDate = dateVar.getDay();
 changedMonth = dateVar.getMonth();
 console.log(changedDate);
+//Shows the Current day on the page
 document.getElementById("date").innerHTML =  week(changedDate) + " , " + month(changedMonth) + " " + dateVar.getDate();
 
 //Using JQUERY to hide the weeklys specials tab
@@ -12,8 +15,10 @@ $('#week-title').click(function(){
 
 }
 
+//Creates a function that updates information based on what day it is
 function week(day)
 {
+	//Create an object of each day that holds a specific appetizer, entree and dessert accordingly
 	var monday = {
 	app : "Wood Oven Buffalo Chicken Wings",
 	dApp:"1lbs of wings served with crudlite and cilantro lime sour cream.",
@@ -64,6 +69,7 @@ function week(day)
 	dessert: "Vanilla Gelato"
 	};
 	
+	//By getting the day of the week, used a switch statement and depending on the day, a object is called
 	switch(day)
 	{
 		case 0:
@@ -124,6 +130,7 @@ function week(day)
 			break;
 	}
 }
+//Creates a function to convert the number of the month to text
 function month (whichMonth)
 {
 	switch (whichMonth)
