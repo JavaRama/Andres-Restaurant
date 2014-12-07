@@ -1,3 +1,4 @@
+/*Border of the page */
 .slmenu{
 	margin:0 auto;
 	height: 800px;
@@ -6,6 +7,7 @@
 	font-family: Copperplate Gothic Light;
 	background-color: #FFFFEB;
 }
+/* Postion of each list and item */
 #appetizers{
 	padding-top:100px;
 	position:relative;
@@ -91,6 +93,7 @@ margin-bottom:1px;
  font-size: 18px;
  color:#A30000;
 }
+/*Hides the weekly specials */
 #weekly-specials{
 display:none;
 }
