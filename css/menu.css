@@ -1,3 +1,4 @@
+/* Border of the page */
 .slmenu{
 	margin:0 auto;
 	height: 950px;
@@ -7,6 +8,7 @@
 	background-color: #FFFFEB;
 	display:none;
 }
+/*Position of each list and item */
 #appetizers{
 	padding-top:40px;
 	position:relative;
