@@ -15,9 +15,9 @@
 	var emailReg = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 	var postalReg = /^((\d{5}-\d{4})|(\d{5})|([AaBbCcEeGgHhJjKkLlMmNnPpRrSsTtVvXxYy]\d[A-Za-z](\s|\-)?\d[A-Za-z]\d))$/;
 
-$(function() {
-    $( "#datepicker" ).datepicker();
-  });
+//$(function() {
+//    $( "#datepicker" ).datepicker();
+//  });
 	
 	function fieldreset(fieldtoreset) {
 		var timeout;
