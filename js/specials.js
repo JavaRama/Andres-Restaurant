@@ -98,7 +98,7 @@ function week(day)
 			break;
 		case 3:
 			document.getElementById("app").innerHTML = wednesday.app;
-			document.getElementById("dApp").innerHTML = wednesday.dEpp;			
+			document.getElementById("dApp").innerHTML = wednesday.dApp;			
 			document.getElementById("entree").innerHTML = wednesday.entree;
 			document.getElementById("dEntree").innerHTML = wednesday.dEntree;
 			document.getElementById("dessert-item").innerHTML = wednesday.dessert;
